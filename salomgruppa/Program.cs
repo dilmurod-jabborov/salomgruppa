@@ -629,16 +629,17 @@ class Program
                             break;
                         }
                     }
-                    else if (order == "book2")
+                    
+                    else if (order == "book3")
                     {
-                        Console.WriteLine(book2);
+                        Console.WriteLine(book3);
                         Console.WriteLine("Kitob soni: ");
                         int numb = int.Parse(Console.ReadLine());
                         Console.Clear();
                         Console.Write("Manzilingizni kiriting: ");
                         string manzil = Console.ReadLine();
                         Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book2} kitobingiz 2-3 kun ichida yetkazib beriladi.");
+                        Console.WriteLine($"Sizning {numb} ta {book3} kitobingiz 2-3 kun ichida yetkazib beriladi.");
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
@@ -656,16 +657,16 @@ class Program
                             break;
                         }
                     }
-                    else if (order == "book3")
+                    else if (order == "book2")
                     {
-                        Console.WriteLine(book3);
+                        Console.WriteLine(book2);
                         Console.WriteLine("Kitob soni: ");
                         int numb = int.Parse(Console.ReadLine());
                         Console.Clear();
                         Console.Write("Manzilingizni kiriting: ");
                         string manzil = Console.ReadLine();
                         Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book3} kitobingiz 2-3 kun ichida yetkazib beriladi.");
+                        Console.WriteLine($"Sizning {numb} ta {book2} kitobingiz 2-3 kun ichida yetkazib beriladi.");
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
