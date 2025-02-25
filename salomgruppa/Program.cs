@@ -480,14 +480,15 @@ class Program
                             break;
                         }
                     }
-                    else if (choice == "Book2")
+                    
+                    else if (choice == "Book3")
                     {
-                        Console.WriteLine("              Ducks, Newburyport");
+                        Console.WriteLine("              2666");
                         Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Lucy Ellmann");
-                        Console.WriteLine("Pages -> 1030");
-                        Console.WriteLine("Year -> 2019");
-                        Console.WriteLine("Price -> 20$");
+                        Console.WriteLine("Author -> Roberto Bolano");
+                        Console.WriteLine("Pages -> 1100");
+                        Console.WriteLine("Year -> 2004");
+                        Console.WriteLine("Price -> 25$");
                         Console.WriteLine();
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
@@ -503,14 +504,14 @@ class Program
                             break;
                         }
                     }
-                    else if (choice == "Book3")
+                    else if (choice == "Book2")
                     {
-                        Console.WriteLine("              2666");
+                        Console.WriteLine("              Ducks, Newburyport");
                         Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Roberto Bolano");
-                        Console.WriteLine("Pages -> 1100");
-                        Console.WriteLine("Year -> 2004");
-                        Console.WriteLine("Price -> 25$");
+                        Console.WriteLine("Author -> Lucy Ellmann");
+                        Console.WriteLine("Pages -> 1030");
+                        Console.WriteLine("Year -> 2019");
+                        Console.WriteLine("Price -> 20$");
                         Console.WriteLine();
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
