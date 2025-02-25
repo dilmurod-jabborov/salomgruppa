@@ -710,33 +710,6 @@ class Program
                             break;
                         }
                     }
-                    else if (order == "book5")
-                    {
-                        Console.WriteLine(book5);
-                        Console.WriteLine("Kitob soni: ");
-                        int numb = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        Console.Write("Manzilingizni kiriting: ");
-                        string manzil = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine($"Sizning {numb} ta {book5} kitobingiz 2-3 kun ichida yetkazib beriladi.");
-                        Console.WriteLine();
-                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
-                        Console.WriteLine();
-                        Console.WriteLine("1. Ortga qaytish");
-                        Console.WriteLine("2. Boshqa amal bajarmayman");
-                        int amal = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        if (amal == 1)
-                        {
-                            continue;
-                        }
-                        else if (amal == 2)
-                        {
-                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
-                            break;
-                        }
-                    }
                     else if (order == "book6")
                     {
                         Console.WriteLine(book6);
@@ -765,6 +738,34 @@ class Program
                             break;
                         }
                     }
+                    else if (order == "book5")
+                    {
+                        Console.WriteLine(book5);
+                        Console.WriteLine("Kitob soni: ");
+                        int numb = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                        Console.Write("Manzilingizni kiriting: ");
+                        string manzil = Console.ReadLine();
+                        Console.Clear();
+                        Console.WriteLine($"Sizning {numb} ta {book5} kitobingiz 2-3 kun ichida yetkazib beriladi.");
+                        Console.WriteLine();
+                        Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
+                        Console.WriteLine();
+                        Console.WriteLine("1. Ortga qaytish");
+                        Console.WriteLine("2. Boshqa amal bajarmayman");
+                        int amal = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                        if (amal == 1)
+                        {
+                            continue;
+                        }
+                        else if (amal == 2)
+                        {
+                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
+                            break;
+                        }
+                    }
+                    
                 }
                 else if (bolim == 2)
                 {
