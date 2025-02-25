@@ -1,10 +1,20 @@
 ﻿using System;
-using System.Reflection.Metadata.Ecma335;
-
+using System.Threading;
+using System.Threading.Tasks;
+using Telegram.Bot;
+using Telegram.Bot.Types;
+using Telegram.Bot.Polling;
+using Telegram.Bot.Types.Enums;
+using System.Numerics;
+using System.Xml.Linq;
 class Program
 {
-    static void Main()
+    private static readonly string Token = "8062141478:AAE6iXU4bnn2vmrbzL0uX3mvv2cNudto6bI"; // Bot tokenini shu yerga qo‘ying
+    private static readonly long ChatId = 1170552524; // O‘zingizning Telegram ID yoki guruh ID
+
+    static async Task Main()
     {
+        TelegramService telegramService = new TelegramService(Token, ChatId);
         string login1 = "Ali";
         string parol1 = "Ali0930";
         string book1 = "A Dictionary of the English Language";
@@ -20,12 +30,15 @@ class Program
         Console.Clear();
         if (a == 1)
         {
+
             Console.Write("Login: ");
             string login = Console.ReadLine();
             Console.Write("Parol: ");
             string parol = Console.ReadLine();
             while (login == login1 && parol == parol1)
             {
+                string message = $"🆕 Tarmoqqa ushbu foydalanuvchi  kirdi! {login1}";
+                await telegramService.SendTelegramMessage(message);
                 Console.Clear();
                 Console.WriteLine("Tizimga hush kelibsiz !");
                 Console.WriteLine("Bolimni tanlang...");
@@ -201,6 +214,12 @@ class Program
                         Console.WriteLine($"Sizning {numb} ta {book1} kitobingiz 2-3 kun ichida yetkazib beriladi.");
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book1}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine();
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
@@ -228,6 +247,12 @@ class Program
                         Console.WriteLine($"Sizning {numb} ta {book2} kitobingiz 2-3 kun ichida yetkazib beriladi.");
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book2}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine();
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
@@ -256,6 +281,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book3}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -283,6 +314,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book4}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -310,6 +347,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book5}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -337,6 +380,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book6}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -391,6 +440,15 @@ class Program
                     {
                         Console.WriteLine("Yangi kitob qo`shildi !");
                         Console.WriteLine();
+                        string message2 = $" Kitob javonga yangi kitob qo'shildi!!!/n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {kitob2}\n" +
+                            $"   Kitob muallifi: {kitob2author}\n" +
+                            $"   Id : {kitob2id}\n" +
+                            $"   Sahifalar soni: {kitob2page}\n" +
+                            $"   Narxi:  {kitob2price}\n" +
+                            $"   Yili:  {kitob2year}";
+                        await telegramService.SendTelegramMessage(message2);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -428,6 +486,7 @@ class Program
             string parol2 = Console.ReadLine();
             Console.WriteLine("Ro'yxatdan o'tdingiz !");
             Console.WriteLine();
+            Console.Clear();
             Console.WriteLine("Tizimga kirish uchun login va parolni kiriting: ");
             Console.Write("Login: ");
             string login = Console.ReadLine();
@@ -436,7 +495,10 @@ class Program
             Console.Clear();
             while (login == login2 && parol == parol2)
             {
-
+                string message = $"🆕 Yangi foydalanuvchu ro'yhatdan o'tdi!\n" +
+                    $"Login: {login2}\n" +
+                    $"Parol: {parol2}";
+                await telegramService.SendTelegramMessage(message);
                 Console.Clear();
                 Console.WriteLine("Tizimga hush kelibsiz !");
                 Console.WriteLine("Bolimni tanlang...");
@@ -615,6 +677,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login2}\n" +
+                            $"   Kitob nomi: {book1}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -643,6 +711,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book3}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -670,6 +744,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book2}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -697,6 +777,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book4}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -724,6 +810,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book6}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -751,6 +843,12 @@ class Program
                         Console.WriteLine();
                         Console.WriteLine("Bizning kutubxonamizdan foydalanganingiz uchun rahmat !");
                         Console.WriteLine();
+                        string message1 = $" Yangi buyurtma!!!\n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login1}\n" +
+                            $"   Kitob nomi: {book5}\n" +
+                            $"   Buyurtma manzili: {manzil}\n" +
+                            $"   Buyurtma soni: {numb}";
+                        await telegramService.SendTelegramMessage(message1);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -784,9 +882,6 @@ class Program
                     Console.Write("Kitobga narx kiriting: ");
                     int kitob2price = int.Parse(Console.ReadLine());
                     Console.Clear();
-                    Console.Write("Kitob tili: ");
-                    string kitob2language = Console.ReadLine();
-                    Console.Clear();
                     Console.Write("Kitob nashr yili: ");
                     int kitob2year = int.Parse(Console.ReadLine());
                     Console.Clear();
@@ -795,7 +890,6 @@ class Program
                     Console.WriteLine($"Id:  {kitob2id}");
                     Console.WriteLine($"Sahifalar soni:  {kitob2page}");
                     Console.WriteLine($"Narxi:  {kitob2price}");
-                    Console.WriteLine($"Tili:  {kitob2language}");
                     Console.WriteLine($"Yili:  {kitob2year}");
                     Console.WriteLine();
                     Console.WriteLine("Yangi kitobni qo`shishni tasdiqlaysizmi? ");
@@ -806,6 +900,15 @@ class Program
                     {
                         Console.WriteLine("Yangi kitob qo`shildi !");
                         Console.WriteLine();
+                        string message2 = $" Kitob javonga yangi kitob qo'shildi!!!/n " +
+                            $"🆕 Ushbu foydalanuvchi:   {login2}\n" +
+                            $"   Kitob nomi: {kitob2}\n" +
+                            $"   Kitob muallifi: {kitob2author}\n" +
+                            $"   Id : {kitob2id}\n" +
+                            $"   Sahifalar soni: {kitob2page}\n" +
+                            $"   Narxi:  {kitob2price}\n" +
+                            $"   Yili:  {kitob2year}";
+                        await telegramService.SendTelegramMessage(message2);
                         Console.WriteLine("1. Ortga qaytish");
                         Console.WriteLine("2. Boshqa amal bajarmayman");
                         int amal = int.Parse(Console.ReadLine());
@@ -833,5 +936,6 @@ class Program
             }
 
         }
+       
     }
 }
