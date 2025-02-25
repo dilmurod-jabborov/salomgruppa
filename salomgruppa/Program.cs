@@ -550,13 +550,14 @@ class Program
                             break;
                         }
                     }
-                    else if (choice == "Book5")
+                    
+                    else if (choice == "Book6")
                     {
-                        Console.WriteLine("              Harry Potter and the Philosopher's Stone");
+                        Console.WriteLine("              And then There Were None");
                         Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> J.K. Rowling");
-                        Console.WriteLine("Pages -> 223");
-                        Console.WriteLine("Year -> 1997");
+                        Console.WriteLine("Author -> Agatha Christie");
+                        Console.WriteLine("Pages -> 272");
+                        Console.WriteLine("Year -> 1939");
                         Console.WriteLine("Price -> 10$");
                         Console.WriteLine();
                         Console.WriteLine("1. Ortga qaytish");
@@ -573,13 +574,13 @@ class Program
                             break;
                         }
                     }
-                    else if (choice == "Book6")
+                    else if (choice == "Book5")
                     {
-                        Console.WriteLine("              And then There Were None");
+                        Console.WriteLine("              Harry Potter and the Philosopher's Stone");
                         Console.WriteLine("Language -> English");
-                        Console.WriteLine("Author -> Agatha Christie");
-                        Console.WriteLine("Pages -> 272");
-                        Console.WriteLine("Year -> 1939");
+                        Console.WriteLine("Author -> J.K. Rowling");
+                        Console.WriteLine("Pages -> 223");
+                        Console.WriteLine("Year -> 1997");
                         Console.WriteLine("Price -> 10$");
                         Console.WriteLine();
                         Console.WriteLine("1. Ortga qaytish");
