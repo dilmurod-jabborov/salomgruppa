@@ -715,7 +715,6 @@ class Program
                         Console.WriteLine(book6);
                         Console.WriteLine("Kitob soni: ");
                         int numb = int.Parse(Console.ReadLine());
-                        Console.Beep(100, 500);
                         Console.Clear();
                         Console.Write("Manzilingizni kiriting: ");
                         string manzil = Console.ReadLine();
