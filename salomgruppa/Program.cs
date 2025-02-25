@@ -10,7 +10,7 @@ using System.Xml.Linq;
 class Program
 {
     private static readonly string Token = "8062141478:AAE6iXU4bnn2vmrbzL0uX3mvv2cNudto6bI"; // Bot tokenini shu yerga qo‘ying
-    private static readonly long ChatId = 1170552524; // O‘zingizning Telegram ID yoki guruh ID
+    private static readonly long ChatId = -1002402040732; // O‘zingizning Telegram ID yoki guruh ID
 
     static async Task Main()
     {
