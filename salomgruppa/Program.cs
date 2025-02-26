@@ -61,7 +61,7 @@ class Program
                     Console.Write("Qidirayotgan kitob nomini kiriting: ");
                     string bookName = Console.ReadLine();
                     bookSearch.SearchBook(bookName);
-
+                }
                     if (bolim == 3)
                     {
                         Console.WriteLine("1 = A Dictionary of the English Language");
@@ -564,13 +564,13 @@ class Program
                         break;
 
                     }
-                }
+            }
                 if (login != login1 || parol != parol1)
                 {
                     Console.WriteLine("Login yoki parol noto`g`ri !");
                     return;
                 }
-            }
+            
         }
         else if (a == 2)
         {
