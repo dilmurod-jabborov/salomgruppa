@@ -52,6 +52,7 @@ class Program
                 Console.WriteLine("3. Kitoblar haqida malumot");
                 Console.WriteLine("4. Kitob qidirish ");
                 Console.WriteLine("5. Chiqish");
+                Console.WriteLine("6 Oniline kitob o'qish ");
                 int bolim = int.Parse(Console.ReadLine());
                 Console.Clear();
                 if (bolim == 4)
@@ -237,6 +238,58 @@ class Program
                                 Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
                                 break;
                             }
+                        }
+                    }
+                    else if (bolim == 6)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Bizda ayni damda 5-ta online kitob mavjud");
+                        Console.WriteLine("1. SAHRO ");
+                        Console.WriteLine("2. SHAYTANAT ");
+                        Console.WriteLine("3. JANGCHI ");
+                        Console.WriteLine("4. VAQT ");
+                        Console.WriteLine("5. HALQA ");
+                        Console.Write("");
+                        int k6 = int.Parse(Console.ReadLine());
+                        if (k6 == 1)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Sahro kitobini o'qishingiz mumkin!!!");
+                        }
+                        else if (k6 == 2)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Shaytanat kitobini o'qishingiz mumkin!!!");
+                        }
+                        else if (k6 == 3)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Jangchi kitobini o'qishingiz mumkin!!!");
+
+                        }
+                        else if (k6 == 4)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Vaqt kitobini o'qishingiz mumkin!!!");
+                        }
+                        else if (k6 == 5)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Halqa kitobini o'qishingiz mumkin!!!");
+                        }
+                        Console.WriteLine();
+                        Console.WriteLine("1. Ortga qaytish");
+                        Console.WriteLine("2. Boshqa amal bajarmayman");
+                        int amal = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                        if (amal == 1)
+                        {
+                            continue;
+                        }
+                        else if (amal == 2)
+                        {
+                            Console.WriteLine("Xizmatdan foydalanganingiz uchun raxmat !");
+                            break;
                         }
                     }
                     else if (bolim == 1)
